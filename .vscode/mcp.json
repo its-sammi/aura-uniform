@@ -1,0 +1,23 @@
+{
+	"servers": {
+		"21st-dev": {
+			"type": "http",
+			"url": "https://21st.dev/api/mcp",
+			"headers": {
+				"x-api-key": "${input:21st-api-key}"
+			}
+		},
+		"supabase": {
+			"type": "http",
+			"url": "https://mcp.supabase.com/mcp?project_ref=qnrmphcjbhjsadvfelyj&features=docs,account,database,debugging,development,functions,branching"
+		}
+	},
+	"inputs": [
+		{
+			"type": "promptString",
+			"id": "21st-api-key",
+			"description": "21st.dev MCP API key",
+			"password": true
+		}
+	]
+}
